@@ -1,0 +1,4 @@
+- hosts: centos
+  become: yes
+  roles:
+    - lamp

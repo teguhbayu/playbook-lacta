@@ -1,0 +1,24 @@
+- name: Update and upgrade yum packages
+  yum:
+    name: apache2
+    state: present
+
+- name: Install Apache
+  yum:
+    name: apache2
+    state: present
+
+- name: Install MySQL
+  yum:
+    name: mysql-server
+    state: present
+
+- name: Install PHP and necessary extensions
+  yum:
+    name: php
+    state: present
+
+- name: Restart Apache
+  service:
+    name: apache2
+    state: restarted
